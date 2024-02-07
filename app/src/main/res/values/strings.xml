@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Bank Exercise</string>
+    <string name="title_accounts">Accounts</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_disclosures">Disclosures</string>
+    <string name="title_help">Help</string>
+    <string name="title_playground">Playground</string>
+    <string name="title_cards">Cards</string>
+    <string name="title_actions">Actions</string>
+    <string name="account_icon">Account Icon</string>
+    <string name="transfer_to_family">Transfer to \nMy Family</string>
+    <string name="transfer_to_savings">Transfer to \nSavings</string>
+    <string name="deposit_a_check">Deposit a \nCheck</string>
+    <string name="account_number">Account Number:</string>
+    <string name="hint_amount_to_transfer">amount to transfer</string>
+</resources>

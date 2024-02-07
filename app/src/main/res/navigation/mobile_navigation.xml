@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_accounts">
+
+    <fragment
+        android:id="@+id/navigation_accounts"
+        android:name="com.example.bankexercise.ui.accounts.AccountsFragment"
+        android:label="@string/title_accounts"
+        tools:layout="@layout/fragment_accounts">
+        <action
+            android:id="@+id/action_navigation_accounts_to_transferFragment"
+            app:destination="@id/transferFragment"
+            app:popUpTo="@id/navigation_accounts"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_navigation_accounts_to_transactionFragment"
+            app:destination="@id/transactionFragment"
+            app:popUpTo="@id/navigation_accounts"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.bankexercise.ui.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/navigation_disclosures"
+        android:name="com.example.bankexercise.ui.disclosures.DisclosuresFragment"
+        android:label="@string/title_disclosures"
+        tools:layout="@layout/fragment_disclosures" />
+
+    <fragment
+        android:id="@+id/navigation_help"
+        android:name="com.example.bankexercise.ui.help.HelpFragment"
+        android:label="@string/title_help"
+        tools:layout="@layout/fragment_help" />
+
+    <fragment
+        android:id="@+id/navigation_playground"
+        android:name="com.example.bankexercise.ui.playground.PlaygroundFragment"
+        android:label="@string/title_playground"
+        tools:layout="@layout/fragment_playground" />
+    <fragment
+        android:id="@+id/transactionFragment"
+        android:name="com.example.bankexercise.ui.transactions.TransactionFragment"
+        android:label="TransactionFragment"></fragment>
+    <fragment
+        android:id="@+id/transferFragment"
+        android:name="com.example.bankexercise.ui.transfer.TransferFragment"
+        android:label="TransferFragment"></fragment>
+</navigation>

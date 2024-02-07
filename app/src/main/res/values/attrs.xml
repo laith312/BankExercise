@@ -1,0 +1,9 @@
+<resources>
+    <attr name="primaryTextColor" format="reference"/>
+    <attr name="headerTextColor" format="reference"/>
+    <attr name="primaryHighlightColor" format="reference"/>
+    <attr name="transactionTextColor" format="reference"/>
+    <attr name="secondaryButtonColor" format="reference"/>
+    <attr name="submitButtonColor" format="reference"/>
+
+</resources>

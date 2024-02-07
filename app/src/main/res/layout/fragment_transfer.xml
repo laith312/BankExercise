@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/backArrow"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="TODO"
+        android:src="@drawable/ic_arrow_back_24dp"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/title_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".20" />
+
+    <TextView
+        android:id="@+id/transferTitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/navigation_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_guideline"
+        tools:text="Transfer to My Family" />
+
+    <EditText
+        android:id="@+id/inputAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:focusable="false"
+        android:gravity="center"
+        android:hint="@string/hint_amount_to_transfer"
+        android:importantForAutofill="no"
+        android:inputType="numberDecimal"
+        android:padding="20dp"
+        app:layout_constraintBottom_toTopOf="@id/button_guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/transferTitleText" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/button_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent=".35" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/twentyDollarButton"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="15dp"
+        android:backgroundTint="?attr/secondaryButtonColor"
+        android:text="$20"
+        app:layout_constraintBottom_toTopOf="@id/hundredDollarButton"
+        app:layout_constraintEnd_toStartOf="@id/fiftyDollarButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_guideline" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/fiftyDollarButton"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="30dp"
+        android:backgroundTint="?attr/secondaryButtonColor"
+        android:text="$50"
+        app:layout_constraintBottom_toTopOf="@id/fiveHundredDollarButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/twentyDollarButton"
+        app:layout_constraintTop_toBottomOf="@id/button_guideline" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/hundredDollarButton"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:backgroundTint="?attr/secondaryButtonColor"
+        android:text="$100"
+        app:layout_constraintEnd_toEndOf="@id/twentyDollarButton"
+        app:layout_constraintStart_toStartOf="@id/twentyDollarButton"
+        app:layout_constraintTop_toBottomOf="@id/twentyDollarButton" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/fiveHundredDollarButton"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:backgroundTint="?attr/secondaryButtonColor"
+        android:text="$500"
+        app:layout_constraintEnd_toEndOf="@id/fiftyDollarButton"
+        app:layout_constraintStart_toStartOf="@id/fiftyDollarButton"
+        app:layout_constraintTop_toBottomOf="@id/fiftyDollarButton" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/transferImage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="@id/fiftyDollarButton"
+        app:layout_constraintStart_toStartOf="@id/twentyDollarButton"
+        app:layout_constraintTop_toBottomOf="@id/hundredDollarButton">
+
+        <ImageView
+            android:id="@+id/_fromIcon"
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            android:src="@drawable/ic_checking_round_24dp"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintEnd_toStartOf="@id/_arrowsIcon"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/fromAccountTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="@id/_fromIcon"
+            app:layout_constraintStart_toStartOf="@+id/_fromIcon"
+            app:layout_constraintTop_toBottomOf="@id/_fromIcon"
+            tools:text="CHECKING" />
+
+        <TextView
+            android:id="@+id/fromAccountBalance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="?attr/primaryTextColor"
+            app:layout_constraintEnd_toEndOf="@id/_fromIcon"
+            app:layout_constraintStart_toStartOf="@+id/_fromIcon"
+            app:layout_constraintTop_toBottomOf="@id/fromAccountTitle"
+            tools:text="$232.34" />
+
+        <ImageView
+            android:id="@+id/_arrowsIcon"
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            android:src="@drawable/transfer_arrows_blue_36dp"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintEnd_toStartOf="@id/_toIcon"
+            app:layout_constraintStart_toEndOf="@id/_fromIcon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/_toIcon"
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            android:src="@drawable/ic_family_round_24dp"
+            app:layout_constraintDimensionRatio="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/_arrowsIcon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/toAccountTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="@id/_toIcon"
+            app:layout_constraintStart_toStartOf="@+id/_toIcon"
+            app:layout_constraintTop_toBottomOf="@id/_toIcon"
+            tools:text="MY_FAMILY" />
+
+        <TextView
+            android:id="@+id/toAccountBalance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="?attr/primaryTextColor"
+            app:layout_constraintEnd_toEndOf="@id/_toIcon"
+            app:layout_constraintStart_toStartOf="@+id/_toIcon"
+            app:layout_constraintTop_toBottomOf="@id/toAccountTitle"
+            tools:text="$17.04" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/errorMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red"
+        app:layout_constraintBottom_toTopOf="@id/sendButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/transferImage"
+        tools:text="You have insufficient funds or there was a network failure" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/sendButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:backgroundTint="?attr/submitButtonColor"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:text="SEND"
+        android:textSize="@dimen/navigation_text_size"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/transferImage" />
+
+    <FrameLayout
+        android:id="@+id/loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/purple_semi_transparent"
+        android:clickable="true"
+        android:elevation="10dp"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/progressBar_cyclic"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:minWidth="40dp"
+            android:minHeight="40dp"
+            android:visibility="visible" />
+
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

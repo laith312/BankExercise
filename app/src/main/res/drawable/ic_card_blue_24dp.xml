@@ -1,0 +1,13 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@drawable/blue_background_round"
+        android:height="24dp"
+        android:width="24dp"
+        />
+
+    <item
+        android:drawable="@drawable/card_white_24dp"
+        android:height="24dp"
+        android:width="24dp"/>
+
+</layer-list>
