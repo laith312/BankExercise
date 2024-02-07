@@ -26,30 +26,30 @@ Java target v 1_8
 The main Landing screen allows you to view all your account quickly and has many paths to navigate
 to complete the many task that this app will allow you to perform.
 
-<img src="img/screenshot_home.png.png" alt="Screenshot">
+<img src="img/screenshot_home.png" alt="screenshot" width="540" height="1200">
 
 ### Transactions Feed
 
 You can click on account from within the Home-screen to view the transaction associated with that
 particular account.
 
-<img src="img/screenshot_transactions.png.png" alt="Screenshot">
+<img src="img/screenshot_transactions.png" alt="screenshot" width="540" height="1200">
 
 ### Transfer Money From Checking Account
 
 This feature allows you to transfer money out of your primary checking account into other accounts
 linked to the user.
 
-<img src="img/screenshot_transfer.png.png" alt="Screenshot">
+<img src="img/screenshot_transfer.png" alt="screenshot" width="540" height="1200">
 
 ### Darkmode
 
 I built the app around themes so I was able to leverage dark mode and setup a good looking color
 schema
 
-<img src="img/screenshot_dark_home.png" alt="Screenshot"> 
-<img src="img/screenshot_dark_transaction.png" alt="Screenshot"> 
-<img src="img/screenshot_dark_transfer.png" alt="Screenshot">
+<img src="img/screenshot_dark_home.png" alt="screenshot" width="540" height="1200"> 
+<img src="img/screenshot_dark_transaction.png" alt="screenshot" width="540" height="1200"> 
+<img src="img/screenshot_dark_transfer.png" alt="screenshot" width="540" height="1200">
 
 ## Development Improvements
 
